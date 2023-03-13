@@ -1,49 +1,42 @@
 <template>
-    <section class="subscribe-banner-section">
-        <div class="container">
-            <div class="row">
-                <div class="banner">
-                    <div class="banner-text">
-                        <h2 class="banner__title">
-                            <span class="banner__title-white">Limited Sale:</span>
-                            All courses with 55% off
-                        </h2>
-                    </div>
-                    <div class="banner-input">
-                        <input class="banner-input__text" type="email" value="Enter your e-mail">
-                        <button class="banner-input__button">subscribe</button>
-                    </div>
-                </div>
-                <div class="counter">
-                    <ul class="counter__days">
-                        <li class="counter-num">02</li>
-                        <li class="counter-label">Days</li>
-                    </ul>
-                    <ul class="counter__hours">
-                        <li class="counter-num">15</li>
-                        <li class="counter-label">Hours</li>
-                    </ul>
-                    <ul class="counter__minutes">
-                        <li class="counter-num">40</li>
-                        <li class="counter-label">Minutes</li>
-                    </ul>
-                    <ul class="counter__seconds">
-                        <li class="counter-num">23</li>
-                        <li class="counter-label">Seconds</li>
-                    </ul>
-                </div>
+    <div class="row">
+        <div class="banner">
+            <div class="banner-text">
+                <h2 class="banner__title">
+                    <span class="banner__title-white">Limited Sale:</span>
+                    All courses with 55% off
+                </h2>
+            </div>
+            <div class="banner-input">
+                <input class="banner-input__text" type="email" value="Enter your e-mail">
+                <button class="banner-input__button">subscribe</button>
             </div>
         </div>
-
-    </section>
+        <div class="counter">
+            <ul class="counter__days">
+                <li class="counter-num">02</li>
+                <li class="counter-label">Days</li>
+            </ul>
+            <ul class="counter__hours">
+                <li class="counter-num">15</li>
+                <li class="counter-label">Hours</li>
+            </ul>
+            <ul class="counter__minutes">
+                <li class="counter-num">40</li>
+                <li class="counter-label">Minutes</li>
+            </ul>
+            <ul class="counter__seconds">
+                <li class="counter-num">23</li>
+                <li class="counter-label">Seconds</li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
 
-.subscribe-banner-section {
-    margin-bottom: -20px;
-}
+
 
 .row {
     display: flex;
