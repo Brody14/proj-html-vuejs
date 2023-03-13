@@ -12,7 +12,6 @@
                     sweet
                     mornings of spring which I
                     enjoy with my whole heart.</p>
-
             </div>
         </div>
 
@@ -25,6 +24,7 @@
 .hero {
     height: 820px;
     background-image: url("/images/slide-1.jpg");
+    background-position: center;
 
     .hero-text {
 
