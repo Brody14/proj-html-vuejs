@@ -4,7 +4,8 @@ import SubscribeBanner from './SubscribeBanner.vue';
 import FounderPresentation from './FounderPresentation.vue'
 import Card from './Card.vue';
 import Advertising from './Advertising.vue';
-import InfoCard from './InfoCard.vue'
+import InfoCard from './InfoCard.vue';
+import StatsCard from './StatsCard.vue'
 
 export default {
     components: {
@@ -14,6 +15,7 @@ export default {
         Card,
         Advertising,
         InfoCard,
+        StatsCard
     },
     data() {
         return {
@@ -102,6 +104,28 @@ export default {
                     title: 'Life Coaching',
                     description: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate'
                 }
+            ],
+            statsCards: [
+                {
+                    icon: "fa-solid fa-users",
+                    number: '7500',
+                    label: 'Online Learner'
+                },
+                {
+                    icon: "fa-solid fa-film",
+                    number: '55',
+                    label: 'Video Courses'
+                },
+                {
+                    icon: "fa-solid fa-image",
+                    number: '1025',
+                    label: 'Sliders and Images'
+                },
+                {
+                    icon: "fa-solid fa-thumbs-up",
+                    number: '3380',
+                    label: 'Excellent Reviews'
+                },
             ]
         }
     }
@@ -109,7 +133,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main class="main-content">
         <section class="hero-section">
             <div class="container">
                 <Hero />
@@ -135,7 +159,6 @@ export default {
                     <a href="#">load more</a>
                 </button>
             </div>
-
         </section>
         <section class="advertising-section">
             <div class="container">
@@ -149,7 +172,11 @@ export default {
                     <InfoCard v-for="item in infoCards" :key="item.title" :card="item" />
                 </div>
             </div>
-
+        </section>
+        <section class="stats-section">
+            <div class="container">
+                <StatsCard v-for="item in statsCards" :key="item.label" :card="item" />
+            </div>
         </section>
 
     </main>
@@ -157,6 +184,10 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+
+.main-content {
+    overflow: hidden;
+}
 
 .hero-section {
     height: 820px;
@@ -243,6 +274,18 @@ export default {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+    }
+}
+
+.stats-section {
+    background-image: url('/images/counter-1919x1101.jpg');
+    background-position: top;
+
+    .container {
+        display: flex;
+        gap: 65px;
+        justify-content: center;
+        padding: 270px 0;
     }
 }
 </style>

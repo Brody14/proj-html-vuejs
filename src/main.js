@@ -9,6 +9,9 @@ import {
 	faRocket,
 	faThumbsUp,
 	faGear,
+	faUsers,
+	faFilm,
+	faImage,
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -29,7 +32,10 @@ library.add(
 	faBriefcase,
 	faRocket,
 	faThumbsUp,
-	faGear
+	faGear,
+	faUsers,
+	faFilm,
+	faImage
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
