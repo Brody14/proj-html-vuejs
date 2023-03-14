@@ -234,6 +234,7 @@ export default {
         display: flex;
         justify-content: center;
 
+
         .btn-yellow {
             text-transform: uppercase;
             background-color: $yellow;
@@ -244,7 +245,27 @@ export default {
             font-weight: 700;
             font-size: 14px;
             margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+            transition: box-shadow 300ms linear;
+            overflow: hidden;
 
+
+            &::before {
+                content: '';
+                background-color: #d9a61b;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 250ms ease-in-out;
+                width: 0;
+                height: 100%;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
 
             & a {
                 line-height: 50px;
