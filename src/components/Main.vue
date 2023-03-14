@@ -3,13 +3,15 @@ import Hero from './Hero.vue';
 import SubscribeBanner from './SubscribeBanner.vue';
 import FounderPresentation from './FounderPresentation.vue'
 import Card from './Card.vue';
+import Advertising from './Advertising.vue';
 
 export default {
     components: {
         Hero,
         SubscribeBanner,
         FounderPresentation,
-        Card
+        Card,
+        Advertising
     },
     data() {
         return {
@@ -111,6 +113,11 @@ export default {
             </div>
 
         </section>
+        <section class="advertising-section">
+            <div class="container">
+                <Advertising />
+            </div>
+        </section>
 
     </main>
 </template>
@@ -135,14 +142,13 @@ export default {
     padding: 70px;
 
 
+
     .container.grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         margin: 0 auto;
         padding: 50px 70px;
-
-
     }
 
     .courses-section__title {
@@ -174,6 +180,18 @@ export default {
                 padding: 15px 25px;
             }
         }
+    }
+}
+
+.advertising-section {
+    background-image: url('/images/slider_1-1917x607-1914x606.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0 0;
     }
 }
 </style>
