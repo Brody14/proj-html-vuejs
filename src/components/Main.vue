@@ -6,6 +6,7 @@ import Card from './Card.vue';
 import Advertising from './Advertising.vue';
 import InfoCard from './InfoCard.vue';
 import StatsCard from './StatsCard.vue'
+import Review from './Review.vue'
 
 export default {
     components: {
@@ -15,7 +16,8 @@ export default {
         Card,
         Advertising,
         InfoCard,
-        StatsCard
+        StatsCard,
+        Review
     },
     data() {
         return {
@@ -178,7 +180,12 @@ export default {
                 <StatsCard v-for="item in statsCards" :key="item.label" :card="item" />
             </div>
         </section>
-
+        <section class="review-section">
+            <div class="container">
+                <h2 class="review-section__title">What Students Say</h2>
+                <Review />
+            </div>
+        </section>
     </main>
 </template>
 
@@ -286,6 +293,21 @@ export default {
         gap: 65px;
         justify-content: center;
         padding: 270px 0;
+    }
+}
+
+.review-section {
+    &__title {
+        font-size: 50px;
+        font-family: 'Roboto slab', serif;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .container {
+        max-width: 765px;
+        padding: 100px 0;
     }
 }
 </style>
