@@ -4,6 +4,7 @@ import SubscribeBanner from './SubscribeBanner.vue';
 import FounderPresentation from './FounderPresentation.vue'
 import Card from './Card.vue';
 import Advertising from './Advertising.vue';
+import InfoCard from './InfoCard.vue'
 
 export default {
     components: {
@@ -11,7 +12,8 @@ export default {
         SubscribeBanner,
         FounderPresentation,
         Card,
-        Advertising
+        Advertising,
+        InfoCard,
     },
     data() {
         return {
@@ -78,6 +80,28 @@ export default {
                     time: '6 hours'
                 },
 
+            ],
+            infoCards: [
+                {
+                    icon: "fa-solid fa-briefcase",
+                    title: 'Entrepreneurship',
+                    description: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate'
+                },
+                {
+                    icon: "fa-solid fa-rocket",
+                    title: 'Accelerated learning',
+                    description: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate'
+                },
+                {
+                    icon: "fa-solid fa-thumbs-up",
+                    title: 'Productivity',
+                    description: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate'
+                },
+                {
+                    icon: "fa-solid fa-gear",
+                    title: 'Life Coaching',
+                    description: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate'
+                }
             ]
         }
     }
@@ -117,6 +141,15 @@ export default {
             <div class="container">
                 <Advertising />
             </div>
+        </section>
+        <section class="info-section">
+            <div class="container">
+                <h2 class="info__title">Why my Courses&quest;</h2>
+                <div class="container-grid">
+                    <InfoCard v-for="item in infoCards" :key="item.title" :card="item" />
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -192,6 +225,24 @@ export default {
         display: flex;
         justify-content: center;
         padding: 50px 0 0;
+    }
+}
+
+.info-section .container {
+    padding: 85px 70px;
+
+    .info__title {
+        font-size: 50px;
+        font-family: 'Roboto slab', serif;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 </style>

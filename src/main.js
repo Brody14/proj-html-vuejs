@@ -2,7 +2,14 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faSignal, faListUl } from "@fortawesome/free-solid-svg-icons";
+import {
+	faSignal,
+	faListUl,
+	faBriefcase,
+	faRocket,
+	faThumbsUp,
+	faGear,
+} from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import {
 	faLinkedin,
@@ -18,7 +25,11 @@ library.add(
 	faTwitter,
 	faSignal,
 	faListUl,
-	faClock
+	faClock,
+	faBriefcase,
+	faRocket,
+	faThumbsUp,
+	faGear
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
