@@ -84,11 +84,11 @@ export default {
 
     .nav__item {
         position: relative;
+        transition: color 300ms ease;
     }
 
     .nav__item:hover {
         color: $yellow;
-        transition: color 300ms ease;
     }
 
     .nav__item:active::before {
@@ -135,9 +135,13 @@ export default {
     font-size: 18px;
     line-height: 16px;
 
+    .social__icon {
+        transition: color 300ms ease;
+
+    }
+
     .social__icon:hover {
         color: $yellow;
-        transition: color 300ms ease;
     }
 }
 </style>
