@@ -205,5 +205,10 @@ export default {
         opacity: 1;
     }
 
+    .card-footer .card-footer__details {
+        gap: 17px;
+        justify-content: space-between;
+    }
+
 }
 </style>
