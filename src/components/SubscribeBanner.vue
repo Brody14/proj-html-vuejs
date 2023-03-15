@@ -18,7 +18,8 @@ export default {
                 </h2>
             </div>
             <div class="banner-input">
-                <input class="banner-input__text" type="email" value="Enter your e-mail">
+                <input class="banner-input__text" type="email" placeholder="Enter your e-mail"
+                    onfocus="this.placeholder = ''" onblur="this.placeholder='Enter your e-mail'">
                 <button class="banner-input__button">subscribe</button>
             </div>
         </div>
