@@ -1,3 +1,13 @@
+<script>
+import Countdown from './Countdown.vue'
+
+export default {
+    components: {
+        Countdown,
+    }
+}
+</script>
+
 <template>
     <div class="row">
         <div class="banner">
@@ -13,30 +23,13 @@
             </div>
         </div>
         <div class="counter">
-            <ul class="counter__days">
-                <li class="counter-num">02</li>
-                <li class="counter-label">Days</li>
-            </ul>
-            <ul class="counter__hours">
-                <li class="counter-num">15</li>
-                <li class="counter-label">Hours</li>
-            </ul>
-            <ul class="counter__minutes">
-                <li class="counter-num">40</li>
-                <li class="counter-label">Minutes</li>
-            </ul>
-            <ul class="counter__seconds">
-                <li class="counter-num">23</li>
-                <li class="counter-label">Seconds</li>
-            </ul>
+            <Countdown />
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
-
-
 
 .row {
     display: flex;
@@ -98,28 +91,9 @@
 }
 
 .counter {
-    flex-basis: 50%;
     display: flex;
+    flex-basis: 50%;
     gap: 45px;
     padding: 0 50px;
-
-    .counter__days,
-    .counter__hours,
-    .counter__minutes,
-    .counter__seconds {
-        list-style: none;
-        text-align: center;
-    }
-
-    .counter-num {
-        color: white;
-        font-size: 70px;
-    }
-
-    .counter-label {
-        font-family: 'Roboto slab', serif;
-        font-weight: 700;
-        font-size: 20px;
-    }
 }
 </style>
