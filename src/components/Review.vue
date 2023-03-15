@@ -1,31 +1,62 @@
+<script>
+
+export default {
+    props: {
+        image: {
+            type: Array,
+            required: true
+        },
+        slide: {
+            type: Object,
+            required: true
+        }
+    },
+    data() {
+        return {
+            currentIndex: 0,
+        }
+    },
+    methods: {
+        next() {
+            const lastSlide = this.image.length - 1
+
+            if (this.currentIndex != lastSlide) this.currentIndex++
+        },
+        prev() {
+            if (this.currentIndex != 0) this.currentIndex--
+        }
+    }
+}
+
+</script>
+
 <template>
     <div class="slider">
 
-        <div class="slider__img">
-            <img src="/images/1-100x100.jpg" alt="">
-            <img class="active" src="/images/2-100x100.jpg" alt="">
-            <img src="/images/4-100x100.jpg" alt="">
+        <div class="slider-header">
+            <figure class="slider__image">
+                <img v-for="(item, index) in image" :key="item" :src="item"
+                    :class="(index === currentIndex) ? 'active' : ''" alt="">
+            </figure>
 
             <div class="slider__handle">
-                <font-awesome-icon class="arrow arrow-left" icon="fa-solid fa-arrow-left" />
-                <font-awesome-icon class="arrow arrow-right" icon="fa-solid fa-arrow-right" />
+                <font-awesome-icon class="arrow arrow-left" icon="fa-solid fa-arrow-left" @click="prev" />
+                <font-awesome-icon class="arrow arrow-right" icon="fa-solid fa-arrow-right" @click="next" />
             </div>
         </div>
-        <div class="slider-text">
-            <h4 class="slider__title">Paints of the Future</h4>
+        <div class="slider-footer">
+            <div class="slider__text" v-for="(item, index) in slide" :key="item"
+                :class="(index === this.currentIndex) ? 'active' : ''">
+                <h4 class="slider__title"> {{ item.title }}</h4>
 
-            <ul class="slider__icon">
-                <li v-for="n in 5" :key="n">
-                    <font-awesome-icon icon="fa-solid fa-star" />
-                </li>
-            </ul>
+                <ul class="slider__icon">
+                    <li v-for="n in 5" :key="n">
+                        <font-awesome-icon icon="fa-solid fa-star" />
+                    </li>
+                </ul>
 
-            <p class="slider__description">The response to your MasterStudy has been really overwhelming! Those who
-                participated
-                in the workshop are spreading the word here on campus and the "buzz" is on. The VP of
-                Instruction wants you to come back! Her goal is to have more faculty trained. She also
-                wants to attend a workshop herself. Our President told me Masterstudy needs to be the
-                cornerstone of our success program.</p>
+                <p class="slider__description">{{ item.content }}</p>
+            </div>
         </div>
 
     </div>
@@ -41,6 +72,7 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 25px;
+        cursor: pointer;
 
         &.arrow-left {
             left: 75px;
@@ -51,28 +83,39 @@
         }
     }
 
-    .slider__img {
+    .slider-header {
         position: relative;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
         margin-bottom: 50px;
 
+        .slider__image {
 
+            display: flex;
+            justify-content: center;
+            gap: 30px;
 
-        & img {
-            border-radius: 999px;
-            aspect-ratio: 1/1;
-            width: 70px;
+            & img {
+                border-radius: 999px;
+                aspect-ratio: 1/1;
+                width: 70px;
+            }
+
+            img.active {
+                transform: scale(1.5);
+            }
         }
 
-        img.active {
-            transform: scale(1.5);
-        }
     }
 
-    .slider-text {
+    .slider-footer {
         text-align: center;
+
+        .slider__text {
+            display: none;
+        }
+
+        .slider__text.active {
+            display: block;
+        }
 
         .slider__title {
             font-size: 22px;
