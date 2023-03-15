@@ -186,4 +186,24 @@ export default {
     }
 
 }
+
+@media screen and (max-width: $bp-tablet) {
+
+    .card .card-header .card-header__img img,
+    .card .card-body {
+        width: 340px;
+        margin: 0 auto;
+    }
+
+    .card .card-header .card-header__img img {
+
+        filter: brightness(0.4) sepia(0.3);
+    }
+
+
+    .card .card-header .prices {
+        opacity: 1;
+    }
+
+}
 </style>

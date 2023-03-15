@@ -72,6 +72,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .counter__days,
 .counter__hours,
 .counter__minutes,
@@ -89,5 +91,17 @@ export default {
     font-family: 'Roboto slab', serif;
     font-weight: 700;
     font-size: 20px;
+}
+
+@media screen and (max-width: $bp-tablet) {
+    .counter-num {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+
+    .counter-label {
+        font-size: 10px;
+    }
+
 }
 </style>

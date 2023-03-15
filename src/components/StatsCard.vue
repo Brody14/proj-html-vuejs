@@ -4,7 +4,7 @@ export default {
         card: {
             type: Object,
             required: true,
-        }
+        },
     }
 }
 </script>
@@ -43,6 +43,17 @@ export default {
 
     &__description {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: $bp-tablet) {
+    .card {
+        display: block;
+        text-align: center;
+    }
+
+    .card .card__icon {
+        margin-bottom: 15px;
     }
 }
 </style>

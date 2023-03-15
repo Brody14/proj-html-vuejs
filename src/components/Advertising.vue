@@ -7,8 +7,7 @@
 
     </div>
     <div class="ad-image">
-        <img src="/images/book.png" alt="">
-
+        <img class=" ad__img" src="/images/book.png" alt="">
     </div>
 </template>
 
@@ -48,5 +47,23 @@
 
 .ad-image {
     flex-basis: 50%;
+}
+
+@media screen and (max-width: $bp-tablet) {
+
+    .ad {
+        padding: 30px 0;
+    }
+
+    .ad .ad__description,
+    .ad-image {
+        display: none;
+    }
+
+    .ad .ad__title {
+        font-size: 25px;
+        padding: 0 50px;
+        line-height: normal;
+    }
 }
 </style>

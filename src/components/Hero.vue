@@ -46,4 +46,22 @@
         width: 570px;
     }
 }
+
+@media screen and (max-width: $bp-tablet) {
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        padding-top: 72px;
+
+        .hero-text__title {
+            font-size: 40px;
+            line-height: normal;
+        }
+
+        .hero-text__paragraph {
+            width: 80%;
+        }
+    }
+
+}
 </style>

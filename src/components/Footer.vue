@@ -211,4 +211,28 @@ export default {
 .pages .menu__item:hover {
     color: white;
 }
+
+@media screen and (max-width: $bp-tablet) {
+    .main-footer .container {
+        grid-template-columns: 1fr;
+        padding: 60px 15px;
+        gap: 30px
+    }
+
+    .contact .menu .menu__item:last-child {
+        font-size: 16px;
+    }
+
+    .pages .menu-wrapper {
+        display: block;
+    }
+
+    .pages .menu-wrapper .menu {
+        margin-bottom: 15px;
+    }
+
+    .card {
+        gap: 0
+    }
+}
 </style>

@@ -78,4 +78,18 @@ export default {
         font-size: 56px;
     }
 }
+
+@media screen and (max-width: $bp-tablet) {
+
+    .card {
+        width: 340px;
+        height: 400px;
+        display: block;
+        padding-top: 30px;
+    }
+
+    .card .card__icon {
+        margin-bottom: 20px;
+    }
+}
 </style>

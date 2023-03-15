@@ -224,11 +224,11 @@ export default {
     bottom: 160px;
 }
 
+
+
 .courses-section {
     background-color: $light-grey;
     padding: 70px;
-
-
 
     .container.grid-container {
         display: grid;
@@ -346,5 +346,48 @@ export default {
         max-width: 765px;
         padding: 100px 0;
     }
+}
+
+@media screen and (max-width: $bp-tablet) {
+    .subscribe-banner-section {
+        bottom: 280px;
+        margin-bottom: -160px
+    }
+
+    .courses-section {
+        padding: 30px 15px;
+
+        .container.grid-container {
+            grid-template-columns: 1fr;
+            padding: 30px 15px
+        }
+    }
+
+    .advertising-section .container {
+        display: block;
+        padding: 0;
+    }
+
+    .info-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .info-section .container .container-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-section .container {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+
+    .review-section .container {
+        padding: 30px 15px;
+    }
+
 }
 </style>

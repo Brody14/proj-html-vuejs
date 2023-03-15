@@ -141,4 +141,10 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: $bp-tablet) {
+    .slider .slider-header {
+        display: none;
+    }
+}
 </style>

@@ -14,9 +14,12 @@ export default {
     <header class="main-header">
         <div class="container">
             <figure class="header-logo">
-                <img src="/images/MasterStudy-1.svg" alt="">
+                <a href="#">
+                    <img src="/images/MasterStudy-1.svg" alt="">
+                </a>
             </figure>
             <nav class="header-nav">
+                <font-awesome-icon icon="fa-solid fa-bars" class="menu-icon" />
                 <ul class="nav__menu">
                     <li class="nav__item" v-for="link in links" :key="link">
                         <a href="#"> {{ link }} </a>
@@ -68,6 +71,12 @@ export default {
 
 .header-nav {
     margin-left: auto;
+
+    .menu-icon {
+        display: none;
+        color: $yellow;
+        font-size: 30px
+    }
 }
 
 .nav__menu,
@@ -143,5 +152,26 @@ export default {
     .social__icon:hover {
         color: $yellow;
     }
+}
+
+@media screen and (max-width: $bp-tablet) {
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .header-logo img {
+        width: 200px;
+    }
+
+    .nav__menu,
+    .social {
+        display: none;
+    }
+
+    .header-nav .menu-icon {
+        display: flex;
+    }
+
 }
 </style>

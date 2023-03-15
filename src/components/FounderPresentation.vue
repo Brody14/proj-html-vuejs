@@ -58,4 +58,15 @@
     }
 
 }
+
+@media screen and (max-width: $bp-tablet) {
+    .row {
+        display: block;
+        padding: 0 0 100px;
+    }
+
+    .founder {
+        margin-bottom: 30px;
+    }
+}
 </style>

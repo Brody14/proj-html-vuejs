@@ -15,6 +15,7 @@ import {
 	faStar,
 	faArrowRight,
 	faArrowLeft,
+	faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -41,7 +42,8 @@ library.add(
 	faImage,
 	faStar,
 	faArrowRight,
-	faArrowLeft
+	faArrowLeft,
+	faBars
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

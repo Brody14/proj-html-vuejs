@@ -45,7 +45,6 @@ export default {
 .banner {
     flex-basis: 50%;
 
-
     .banner__title {
         font-size: 32px;
         margin-bottom: 40px;
@@ -96,5 +95,33 @@ export default {
     flex-basis: 50%;
     gap: 45px;
     padding: 0 50px;
+}
+
+@media screen and (max-width: $bp-tablet) {
+    .row {
+        display: block;
+        padding: 30px 15px;
+    }
+
+    .banner .banner__title {
+        font-size: 27px;
+        padding: 0 15px;
+    }
+
+    .banner .banner-input .banner-input__text {
+        margin-bottom: 10px;
+
+    }
+
+    .banner .banner-input .banner-input__button {
+        position: relative;
+        width: 100%;
+    }
+
+    .counter {
+        padding: 30px 15px;
+        justify-content: center;
+        gap: 15px
+    }
 }
 </style>
